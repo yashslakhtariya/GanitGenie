@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Frameworks Overview</title>
+    <link rel="stylesheet" href="js-frameworks.css">
+    <script defer src="js-frameworks.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="branding">JavaScript Frameworks</div>
+        <div class="theme-toggle">
+            <button id="theme-toggle"><i class="fas fa-palette"></i></button>
+        </div>
+    </header>
+    <main class="content">
+        <!-- Angular JS Section -->
+        <section class="framework">
+            <h2>Angular JS</h2>
+            <p><strong>AngularJS achieves this with two-way data binding that keeps the view and model in sync (automatically). </strong> You are basically telling the View when it changes, the model will be updated automatically and vice versa. The two-way binding certainly needs less hacks compared to reflecting updates in the UI with manual intervention.</p>
+            <p>Angular has a change detection system that observes periodically the application for changes. Under the hood of this mechanism is a system that continuously compares the model's current state with its previous version and reflects any modifications into the view right away.</p>
+            <p><strong>Best Use Cases:</strong> Angular is perfect for Enterprise apps, incredibly complex single-page applications (SPAs), and big boss projects. The amount of out-of-the-box solutions for dependency injection, form handling, and HTTP makes it a prominent choice for huge teams dealing with complex projects.</p>
+        </section>
+
+        <!-- Vue JS Section -->
+        <section class="framework">
+            <h2>Vue JS</h2>
+            <p><strong>Vue uses reactive binding, and the smallest change in the data model shows up in the UI with no effort.</strong> It hides much of the low-level DOM complexities so developers can concentrate on their model. Vue’s template engine makes it easier to render HTML from the model state.</p>
+            <p>In comparison to most other frameworks, Vue is incredibly flexible, and you can chunk your application as if you were building an app around HTML DOM intricacies.</p>
+            <p><strong>Best Use Cases:</strong> Use Vue for simple to medium applications. PWAs (Progressive Web Apps) have been made with it because of how fast and easy they are to write using this rendering engine.</p>
+        </section>
+
+        <!-- Nuxt JS Section -->
+        <section class="framework">
+            <h2>Nuxt JS</h2>
+            <p><strong>Nuxt is a Node-built framework using Vue created to use with SSR (Asynchronous, Server-Side Rendering) or static site generation.</strong> It adds an extra layer to what Vue can do, providing a more methodical approach to building expansive applications in Vue. Nuxt allows developers to create dynamic content server-side, so performance and SEO are increased.</p>
+            <p><strong>Introduction:</strong> Nuxt is the file-based routing which makes routing so easy within your app. It also eventually allows you to bundle with other pre-built modules through modularity.</p>
+            <p><strong>Suitable for:</strong> Server-Side Rendering, Static Websites — and ideally a modular codebase that can scale effortlessly on Nuxt.</p>
+        </section>
+
+        <!-- Next JS Section -->
+        <section class="framework">
+            <h2>Next JS</h2>
+            <p><strong>NextJS is a framework explicitly based on React, which supports server-side rendering (SSR) and static site generation.</strong> It is suited for SEO-based applications.</p>
+            <p>Next JS enables server-side rendering (SSR) and content-heavy websites, which is why this ensures Next JS pages are faster as well as better for search engines, when written.</p>
+            <p>Additionally, it uses file-based routing, which means you can handle routing very naturally and effectively.</p>
+            <p><strong>Best Use Cases:</strong> Next JS is almost always used for SEO or content-heavy static sites (e.g., blogs and news sites) that value content load speed and search engine exposure.</p>
+        </section>
+
+        <!-- Node JS Section -->
+        <section class="framework">
+            <h2>Node JS</h2>
+            <p><strong>Node JS gives you the ability to run JavaScript on the server side (outside of the browser environment).</strong> Google Chrome’s V8 JavaScript engine runs code in order for developers to work with JavaScript to develop back-end systems.</p>
+            <p>One of the major functionalities of Node.js is to manage a lot of requests in parallel through the Event Loop. This non-blocking, asynchronous I/O model can be used in real-time apps (like messaging or live streaming).</p>
+            <p><strong>Suitable for:</strong> Node JS is used in backend services, APIs, and real-time applications, for example, live chat, video streaming, and interactive APIs.</p>
+        </section>
+    </main>
+</body>
+</html>

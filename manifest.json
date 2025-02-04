@@ -1,0 +1,16 @@
+{
+    "name": "GanitGenie",
+    "short_name": "GanitGenie",
+    "start_url": "/index.html",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#ba68c8",
+    "description": "A sleek and intuitive calculator for all your math needs.",
+    "icons": [
+        {
+            "src": "ganitgenie.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
+}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NPM vs Yarn vs PNPM Overview</title>
+    <link rel="stylesheet" href="npm-yarn-pnpm.css">
+    <script defer src="npm-yarn-pnpm.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="branding">NPM vs Yarn vs PNPM</div>
+        <div class="theme-toggle">
+            <button id="theme-toggle"><i class="fas fa-palette"></i></button>
+        </div>
+    </header>
+    <main class="content">
+        <!-- NPM Section -->
+        <section class="package-manager">
+            <h2>NPM (Node Package Manager)</h2>
+            <p><strong>NPM is the JavaScript package manager that ships with Node.js.</strong> It allows developers to share and install dependencies in their projects, making it an essential tool for keeping libraries and packages in the JS ecosystem updated.</p>
+            <p><strong>Key Features:</strong></p>
+            <ul>
+                <li>Locking of Package: NPM comes with a feature called <strong>package-lock.json</strong>, which ensures you install the same version of dependencies across all environments.</li>
+                <li>Automatic Vulnerability Assessments: NPM scans installed packages for known vulnerabilities, making it easier for developers to keep their apps secure.</li>
+            </ul>
+            <p><strong>Ideal Use Cases:</strong> Recommended for package management in standard mode, especially for legacy projects where simplicity and compatibility are key considerations.</p>
+        </section>
+
+        <!-- Yarn Section -->
+        <section class="package-manager">
+            <h2>Yarn (Yet Another Resource Negotiator)</h2>
+            <p><strong>Yarn was created to address issues in NPM, such as performance and non-deterministic dependency resolution.</strong> Developed by Facebook and Google, it solves several problems that were seen as insurmountable with NPM.</p>
+            <p><strong>Key Features:</strong></p>
+            <ul>
+                <li><strong>Caching:</strong> Yarn caches installed dependencies, making subsequent installations faster.</li>
+                <li><strong>Offline Installation:</strong> If a dependency was previously installed, Yarn allows you to install it even while offline.</li>
+                <li><strong>Workspaces:</strong> Yarn supports workspaces, enabling you to manage multiple packages in one repository (ideal for monorepos).</li>
+                <li><strong>Deterministic Dependency Resolution:</strong> Yarn ensures that the same versions of dependencies are installed everywhere, avoiding "dependency drift."</li>
+            </ul>
+            <p><strong>Ideal Use Cases:</strong> Yarn is best for faster installations, offline development, and monorepo management for projects with multiple packages.</p>
+        </section>
+
+        <!-- PNPM Section -->
+        <section class="package-manager">
+            <h2>PNPM (Performance NPM)</h2>
+            <p><strong>PNPM is a fast, disk space-efficient package manager that enhances installation speeds (~50% faster than NPM & Yarn).</strong> It introduces a different dependency management approach that optimizes performance and disk space usage.</p>
+            <p><strong>Features to Note:</strong></p>
+            <ul>
+                <li><strong>Persistent Local Dependency:</strong> PNPM stores all libraries locally in one place, symlinking them to node_modules, saving both disk space and installation time.</li>
+                <li><strong>Disk Space Friendly:</strong> PNPM avoids duplicating dependencies across projects, saving valuable disk space.</li>
+                <li><strong>Precise Dependency Model:</strong> PNPM uses a strict dependency model to avoid issues like "dependency hell."</li>
+            </ul>
+            <p><strong>Best for:</strong> Large projects and monorepos, as well as scenarios requiring fast installations, disk space efficiency, and precise dependency management.</p>
+        </section>
+
+        <!-- Selecting Suitable Package Software -->
+        <section class="package-manager">
+            <h2>Selecting Suitable Package Manager</h2>
+            <p><strong>NPM:</strong> Use NPM if you need a simple, vanilla package manager for JavaScript and prioritize compatibility with the Node.js ecosystem.</p>
+            <p><strong>Yarn:</strong> Choose Yarn if you need faster installation times, especially for projects with many dependencies, and offline installation capabilities. It’s also great for managing monorepos.</p>
+            <p><strong>PNPM:</strong> Opt for PNPM if performance, disk space efficiency, and fast installations are crucial, especially for large-scale projects or monorepos.</p>
+        </section>
+    </main>
+</body>
+</html>

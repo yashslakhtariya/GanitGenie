@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Browser Storage Types</title>
+    <link rel="stylesheet" href="browser-storage.css">
+    <script defer src="browser-storage.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="branding">Browser Storage Types</div>
+        <div class="theme-toggle">
+            <button id="theme-toggle"><i class="fas fa-palette"></i></button>
+        </div>
+    </header>
+    <main class="content">
+        <!-- Local Storage Section -->
+        <section class="storage-type">
+            <h2>Local Storage</h2>
+            <p><strong>Overview:</strong> Local Storage enables a website to save up to 5MB of data (or more with vendor prefixes) on the client-side where it will survive browser restarts.</p>
+            <p><strong>Key Features:</strong></p>
+            <ul>
+                <li>Storage of data never expires</li>
+                <li>Can keep a big amount of data locally.</li>
+            </ul>
+            <p><strong>Ideal Use Cases:</strong></p>
+            <ul>
+                <li>Data caching for offline use in a PWA.</li>
+                <li>Storing anything from non-sensitive info like preferences.</li>
+            </ul>
+            <p><strong>Disadvantages:</strong></p>
+            <ul>
+                <li>Just for Strings which means you cannot save hard data directly, period.</li>
+                <li>No security; the data can be seen by any script on the same domain.</li>
+            </ul>
+        </section>
+
+        <!-- Cookies Section -->
+        <section class="storage-type">
+            <h2>Cookies</h2>
+            <p><strong>Overview:</strong> Cookies are small (up to 4 KB) files pushed to the client's hard drive (we use them at Influence for session management).</p>
+            <p><strong>Key Features:</strong></p>
+            <ul>
+                <li>Store small data that expires.</li>
+                <li>Automatically sent with each HTTP request.</li>
+            </ul>
+            <p><strong>Ideal Use Cases:</strong></p>
+            <ul>
+                <li>Persisting tokens for accuracy of authentication.</li>
+                <li>Log user activity and preferences.</li>
+            </ul>
+            <p><strong>Disadvantages:</strong></p>
+            <ul>
+                <li>Uploaded 4KB maximum.</li>
+                <li>Sent with every HTTP request, which is going to add heavy traffic on the network.</li>
+                <li>Security issues, especially if it is not properly encrypted (e.g., XSS).</li>
+            </ul>
+        </section>
+
+        <!-- Session Storage Section -->
+        <section class="storage-type">
+            <h2>Session Storage</h2>
+            <p><strong>Overview:</strong> Session Storage is similar to Local Storage but for the length of a session. Naturally, data is deleted when the tab/window is closed.</p>
+            <p><strong>Key Features:</strong></p>
+            <ul>
+                <li>Session and single-use data.</li>
+                <li>Not shared between tabs.</li>
+            </ul>
+            <p><strong>Ideal Use Cases:</strong></p>
+            <ul>
+                <li>Storing transient data such as fields you filled in a form or session data.</li>
+            </ul>
+            <p><strong>Disadvantages:</strong></p>
+            <ul>
+                <li>When the tab/window is closed, data is lost.</li>
+                <li>Applies to one tab or window — not shared across tabs.</li>
+            </ul>
+        </section>
+
+        <!-- IndexedDB Section -->
+        <section class="storage-type">
+            <h2>IndexedDB</h2>
+            <p><strong>Overview:</strong> IndexedDB is a high-level database for client-side storage of large key-value structured datasets. So it can manage hundreds of MBs to terabytes of data.</p>
+            <p><strong>Key Features:</strong></p>
+            <ul>
+                <li>Holds massive structured data.</li>
+                <li>Data that is not flaky and lives forever.</li>
+            </ul>
+            <p><strong>Ideal Use Cases:</strong></p>
+            <ul>
+                <li>Houses big data sets (i.e., Datasets the size of documents/files).</li>
+                <li>Add offline capabilities for web apps.</li>
+            </ul>
+            <p><strong>Disadvantages:</strong></p>
+            <ul>
+                <li>Harder to integrate than other types of storage.</li>
+                <li>For smaller projects and data storage requirements, it might be more than this simple solution.</li>
+            </ul>
+        </section>
+
+        <!-- Storage Choices Section -->
+        <section class="storage-type">
+            <h2>Storage Choices – Choosing the Right Storage Solution</h2>
+            <ul>
+                <li><strong>Local Storage</strong> — Use this for read-only, non-sensitive data but be aware that nothing is secret.</li>
+                <li><strong>Cookies</strong> — Use cookies for session management or tracking but beware of the size and security concerns.</li>
+                <li><strong>Session Storage</strong> — For short-term data that needs to be cleared on session end & limited to a single tab.</li>
+                <li><strong>IndexedDB</strong> — Use for large/or structured data and offline support, however, it is easier to take care of.</li>
+            </ul>
+        </section>
+    </main>
+</body>
+</html>
