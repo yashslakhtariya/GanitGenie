@@ -73,7 +73,7 @@
     "vary": "^1.1.2"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\"",
+    "test": "echo \"No test specified\"",
     "run": "node index.js"
   },
   "repository": {
